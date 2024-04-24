@@ -1,70 +1,67 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Movie App
 
-## Available Scripts
+The **React Movie App** is a web application that allows users to search for movies, view a list of results, and display detailed information about each movie. This project demonstrates how to create React components, fetch data from an API, and implement search functionality.
 
-In the project directory, you can run:
+## Preview
+Here's a preview of the final output:
 
-### `npm start`
+![App Preview](Screenshot-from-2023-10-12-18-04-13.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+- Search for movies using a search box.
+- Display a list of movies based on user input.
+- Click on a movie to view detailed information.
+- Use axios to fetch data from a movie API.
+- Utilize React hooks for state management.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Approach
+To build this React Movie App, the following approach is used:
 
-### `npm test`
+1. **Project Structure**: Organize the project with separate components for search, movie list, and movie details.
+   - The **Search Component** contains a search box to input queries.
+   - The **Results Component** displays a list of movies based on search results.
+   - The **Details Component** shows detailed information about a selected movie when clicked.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **API Integration**: Use axios to fetch movie data from an external API based on the user's search query.
+   - Fetch the data using `axios.get()` with the appropriate query.
+   - Use `useEffect` to trigger the API call when the search query changes.
 
-### `npm run build`
+3. **State Management**: Use React hooks to manage state and update the UI.
+   - `useState` to store the search query and movie results.
+   - `useEffect` to re-fetch movie data when the search query changes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Data Mapping**: Use the array `map()` function to render a list of movies.
+   - Each item in the results component corresponds to a movie from the API response.
+   - Clicking on a movie navigates to the details page to view more information.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
+To run the React Movie App locally, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository**: Clone this repository to your local machine.
+   ```bash
+   git clone <repository-url>
+   ```
 
-### `npm run eject`
+2. **Install Dependencies**: Navigate to the project folder and install the required dependencies.
+   ```bash
+   cd <project-name>
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Obtain API Key**: If an API key is required for the movie API, obtain it from the provider's website. Add it to your environment variables or configuration file, ensuring it is not publicly exposed.
+   - Example: Create a `.env` file with your API key.
+   ```bash
+   REACT_APP_MOVIE_API_KEY=your_api_key_here
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Run the App**: Start the development server to run the app locally.
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
+Contributions to the React Movie App are welcome! If you'd like to contribute, please fork this repository, create a new branch for your changes, and submit a pull request.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+- Special thanks to the API provider for movie data.
