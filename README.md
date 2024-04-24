@@ -6,7 +6,7 @@ The **React Movie App** is a web application that allows users to search for mov
 ## Preview
 Here's a preview of the final output:
 
-![App Preview](Screenshot-from-2023-10-12-18-04-13.png)
+![App Preview](Result.png)
 
 ## Features
 - Search for movies using a search box.
@@ -40,12 +40,12 @@ To run the React Movie App locally, follow these steps:
 
 1. **Clone the Repository**: Clone this repository to your local machine.
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Psh09/movie-mania
    ```
 
 2. **Install Dependencies**: Navigate to the project folder and install the required dependencies.
    ```bash
-   cd <project-name>
+   cd movie-mania
    npm install
    ```
 
